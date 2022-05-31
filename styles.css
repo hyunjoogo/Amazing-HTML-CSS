@@ -1,0 +1,85 @@
+:root {
+}
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container.accent-color {
+  accent-color: green;
+}
+
+.container .accent {
+  color: green;
+}
+
+.container.datalist {
+  accent-color: green;
+}
+
+.container.resizeable {
+  background-color: antiquewhite;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container.resizeable .resizeable {
+  background-color: white;
+  resize: both;
+  overflow: auto;
+  border: 1px solid black;
+}
+
+.container .grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  grid-gap: 5px;
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  border-color: 1px solid red;
+  padding: 10px;
+  resize: both;
+  overflow: auto;
+}
+
+.grid > div {
+  background-color: #8ca0ff;
+  padding: 5px;
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  grid-template-areas: "main";
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card > * {
+  grid-area: main;
+}
+.card > .image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 400ms, filter 400ms;
+}
+.card > .text {
+  opacity: 0;
+  color: white;
+  font-size: 1.8em;
+  transition: opacity 400ms, transform 400ms;
+}
+.card:is(:hover, :focus) > .image {
+  transform: scale(1.1);
+  filter: brightness(0.4);
+}
+.card:is(:hover, :focus) > .text {
+  transform: scale(1.2);
+  opacity: 1;
+}

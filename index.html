@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container reveal_on_hover">
+      <h1 contenteditable="true">Card with Text Reveal on hover</h1>
+      <div class="card">
+        <img class="image" src="./image.JPG" alt="" />
+        <p class="text">무지개같아</p>
+      </div>
+    </div>
+    <div class="container accent-color">
+      <h1><span class="accent">Accent</span> Color</h1>
+      <input type="checkbox" checked />
+      <input type="radio" checked />
+      <input type="range" checked />
+      <progress max="100" value="50">50%</progress>
+    </div>
+
+    <div class="container datalist">
+      <!-- https://developer.mozilla.org/ko/docs/Web/HTML/Element/datalist -->
+      <h1>HTML - datalist</h1>
+      <label for="myBrowser">아래 목록에서 브라우저를 선택하세요:</label>
+      <input list="browsers" id="myBrowser" name="myBrowser" />
+      <datalist id="browsers">
+        <option value="Chrome"></option>
+        <option value="Firefox"></option>
+        <option value="Internet Explorer"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+        <option value="Microsoft Edge"></option>
+      </datalist>
+    </div>
+    <div class="container resizeable">
+      <div class="resizeable">
+        <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/resize -->
+        <h1>CSS - Resizeable Element</h1>
+      </div>
+    </div>
+    <div class="container minmax">
+      <div class="resizeable">
+        <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/minmax -->
+        <h1>CSS - minmax() in Grid</h1>
+        <div class="grid">
+          <div>minmax(200px, 300px)</div>
+          <div>1fr</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
