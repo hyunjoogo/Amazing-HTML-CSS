@@ -1,8 +1,9 @@
 :root {
 }
+
 body {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .container.accent-color {
@@ -82,4 +83,8 @@ body {
 .card:is(:hover, :focus) > .text {
   transform: scale(1.2);
   opacity: 1;
+}
+
+nav {
+  position: absolute;
 }
